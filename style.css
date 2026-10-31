@@ -1,0 +1,454 @@
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% -15%,
+            rgba(28, 65, 119, 0.20),
+            transparent 55%
+        ),
+        #080b12;
+
+    color: #edf3ff;
+
+    font-family: Inter, Arial, sans-serif;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 650px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    background: #14233b;
+    color: #76aaff;
+
+    border-radius: 10px;
+
+    font-size: 19px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #8291aa;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+
+    background: #76c9a2;
+    border-radius: 50%;
+}
+
+
+/* =========================
+   DISCORD PROFILE
+========================= */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px;
+
+    background: #0d1320;
+    border: 1px solid #1d2b42;
+
+    border-radius: 15px;
+
+    margin-bottom: 16px;
+}
+
+.profile-avatar {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    background: #192b47;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-info h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.profile-info p {
+    margin-top: 5px;
+
+    font-size: 11px;
+    color: #8291aa;
+}
+
+.discord-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 6px;
+
+    font-size: 10px;
+    color: #76c9a2;
+}
+
+.discord-status span {
+    width: 6px;
+    height: 6px;
+
+    background: #76c9a2;
+    border-radius: 50%;
+}
+
+.discord-link {
+    text-decoration: none;
+
+    color: #8dbaff;
+    background: #14233b;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    padding: 10px 13px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.discord-link:hover {
+    background: #203b61;
+}
+
+
+/* =========================
+   CONVERTER
+========================= */
+
+.converter {
+    padding: 26px;
+
+    background: #0d1320;
+    border: 1px solid #1d2b42;
+
+    border-radius: 17px;
+}
+
+.category {
+    color: #76aaff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin-top: 12px;
+
+    font-size: 26px;
+    letter-spacing: -0.5px;
+}
+
+.description {
+    color: #8291aa;
+
+    font-size: 13px;
+
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #aebbd0;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+textarea {
+    display: block;
+
+    width: 100%;
+    height: 115px;
+
+    padding: 14px;
+
+    resize: vertical;
+
+    background: #090f1a;
+
+    border: 1px solid #24344d;
+    border-radius: 10px;
+
+    color: white;
+
+    font-family: monospace;
+    font-size: 12px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+textarea:focus {
+    border-color: #477fc7;
+}
+
+textarea::placeholder {
+    color: #52627a;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 13px;
+}
+
+button {
+    border: none;
+    border-radius: 9px;
+
+    padding: 12px 17px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#convert {
+    flex: 1;
+
+    background: #17345d;
+    color: white;
+}
+
+#convert:hover {
+    background: #234979;
+}
+
+#clear,
+#copy {
+    background: #172235;
+    color: #b8c8df;
+}
+
+#clear:hover,
+#copy:hover {
+    background: #23334c;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+    margin-top: 22px;
+}
+
+.hidden {
+    display: none;
+}
+
+.output-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px;
+
+    background: #091725;
+
+    border: 1px solid #1c3a5e;
+    border-radius: 10px;
+}
+
+#converted-link {
+    flex: 1;
+
+    color: #a9cbff;
+
+    font-family: monospace;
+    font-size: 12px;
+
+    overflow-wrap: anywhere;
+}
+
+#message {
+    min-height: 14px;
+
+    margin-top: 12px;
+
+    color: #91a3bd;
+    font-size: 11px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 21px;
+
+    text-align: center;
+
+    color: #53627a;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+footer span {
+    color: #76aaff;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 16px;
+    }
+
+    .converter {
+        padding: 21px 16px;
+    }
+
+    .logo {
+        font-size: 11px;
+    }
+
+    .status {
+        font-size: 8px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .profile {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .profile-avatar {
+        width: 47px;
+        height: 47px;
+    }
+
+    .discord-link {
+        padding: 9px;
+        font-size: 10px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    .output-area {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #copy {
+        width: 100%;
+    }
+
+}

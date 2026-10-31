@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080b12">
+
+    <title>Personal Tools</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="logo">
+                <div class="logo-icon">⌘</div>
+                <span>PERSONAL TOOLS</span>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                PERSONAL SPACE
+            </div>
+
+        </header>
+
+
+        <!-- DISCORD PROFILE -->
+        <section class="profile">
+
+            <div class="profile-avatar">
+
+                <img
+                    src="avatar.png"
+                    alt="Discord Avatar"
+                    id="avatar"
+                >
+
+            </div>
+
+            <div class="profile-info">
+
+                <h3>drx</h3>
+
+                <p>drooxz</p>
+
+                <div class="discord-status">
+                    <span></span>
+                    Online
+                </div>
+
+            </div>
+
+            <a
+                href="https://discord.com/users/745968823404068914"
+                target="_blank"
+                class="discord-link"
+            >
+                Discord ↗
+            </a>
+
+        </section>
+
+
+        <!-- CONVERTER -->
+        <section class="converter">
+
+            <div class="category">
+                GOOFISH / XIANYU
+            </div>
+
+            <h1>Link Converter</h1>
+
+            <p class="description">
+                Transforme seus links em endereços diretos.
+            </p>
+
+
+            <!-- INPUT -->
+            <label for="link">
+                LINK ORIGINAL
+            </label>
+
+            <textarea
+                id="link"
+                placeholder="Cole seu link aqui..."
+            ></textarea>
+
+
+            <!-- BUTTONS -->
+            <div class="buttons">
+
+                <button id="convert">
+                    Converter link <span>→</span>
+                </button>
+
+                <button id="clear">
+                    Limpar
+                </button>
+
+            </div>
+
+
+            <!-- RESULT -->
+            <div id="result" class="result hidden">
+
+                <label>
+                    LINK CONVERTIDO
+                </label>
+
+                <div class="output-area">
+
+                    <span id="converted-link"></span>
+
+                    <button id="copy">
+                        Copiar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+            <p id="message"></p>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            PRIVATE TOOLKIT <span>·</span> 2026
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
